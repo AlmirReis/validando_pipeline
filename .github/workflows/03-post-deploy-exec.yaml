@@ -15,8 +15,17 @@ on:
 # trabalhos/tarefas dentro do pipeline = jobs
 jobs:
   e2e-test:
+    
+    # maquina que o job vai executar
     runs-on: ubuntu-latest
 
+    # condicional - if
+    # `$ {expressao }`
+    # == comparacao
+
+    if: $ {{ github.event.workflow_run.conclusion == 'success' }}
+
+    # passa do script de build
     steps:
       - uses: actions/checkout@v4
 
