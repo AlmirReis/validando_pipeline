@@ -1,16 +1,12 @@
 {
-  "name": "programacao",
+  "name": "meu-pipeline-de-testes",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "e2e": "playwright test", 
+     "install:playwright": "npx playwright install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "mocha": "^11.2.2"
+    "@playwright/test": "^1.53.1"
   }
 }
