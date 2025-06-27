@@ -22,10 +22,10 @@ jobs:
         run: npm install -g yarn
 
       - name: Instalando dependências
-        run: yarn
+        run: yarn install
 
       - name: Instalando Playwright
-        run: yarn playwright install
+        run: npx playwright install
 
       - name: Executando Testes E2E
         run: yarn run e2e
