@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "playwright test",
-    "e2e": "playwright test", 
-     "install:playwright": "npx playwright install"
+    "e2e": "playwright test",
+    "install:playwright": "playwright install"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.1"
