@@ -1,0 +1,21 @@
+--Subir arquivo Git Hub
+
+Passo1
+
+No visual studio no opção souce control (ctlh + shift +G)
+commit
+
+OU
+
+Passo 2
+
+git add <nome do arquivo>
+git commit -m "mensagem"
+git push
+
+
+Exemplo
+git add 01-manual-exec.yaml //entrar na pasta correta onde se encontra o arquivo
+git commit -m "Pipeline_v3"  //criar antes o repositório no GitHub
+git push
+

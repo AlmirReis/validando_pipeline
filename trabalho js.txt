@@ -1,0 +1,43 @@
+
+// Trabalho Js
+
+
+// 1. Função que gera a tag de identificação com letras maiúsculas
+export function geradorDeTagsDeIdentificacao(nome) {
+    return nome.toUpperCase();
+  }
+  
+  // 2. Função que verifica se o cachorro pode ser adotado
+  export function verificarSePodeSerAdotado(idade, porte) {
+    const idadeMinima = 2;
+    return (
+        idade >= idadeMinima   ||
+        porte === 'P' ||
+        (idade === 1 && porte ==='M')     
+     
+    );  
+  }
+  
+  // 3. Função que calcula o consumo de ração (em gramas)
+  // Regras fictícias para exemplo: Consumo diário = peso * 300 gramas
+  export function calcularConsumoDeRacao(nome, idade, peso) {
+    return peso * 300;
+  }
+  
+  // 4. Função que decide atividade com base no porte
+  export function decidirTipoDeAtividadePorPorte(porte) {
+    if (porte === 'pequeno') return 'brincar dentro de casa';
+    if (porte === 'medio') return 'passeios no parque';
+    if (porte === 'grande') return 'corridas ao ar livre';
+    return 'atividade desconhecida';
+  }
+  
+  // 5. Função assíncrona que retorna um dado após simular espera
+  export async function buscarDadoAsync() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('Pipoca');
+      }, 100);
+    });
+  }
+  
