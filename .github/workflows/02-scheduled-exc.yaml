@@ -1,7 +1,7 @@
-# CI de Nivel 01 - Disparo manual a partir de 1 clique
+# CI de Nivel 02 - Disparo agendado
 # v5
 
-name: 'Execução Manual'
+name: 'Execução Agendada'
 
 on:
   schedule:
