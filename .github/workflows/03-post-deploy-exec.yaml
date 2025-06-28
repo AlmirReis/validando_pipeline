@@ -28,7 +28,9 @@ jobs:
     # passa do script de build
     steps:
       - uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0
+          submodules: false
 
       - name: Instalando Node
         uses: actions/setup-node@v3
