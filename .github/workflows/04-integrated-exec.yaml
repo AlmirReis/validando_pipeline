@@ -25,23 +25,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Instalando Yarn
-        run: npm install -g yarn
-
-      - name: Instalando dependências
-        run: yarn
-
-      - name: Executando testes de unidade
-        run: yarn test
-
-  e2e-tests:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4PS C:\PROGRAMACAO> tree /f
       - name: Instalando Node
         uses: actions/setup-node@v4
         with:
