@@ -1,5 +1,5 @@
 # CI de Nivel 03 - Disparo após a conclusão de um pipeline
-# v5
+# v6
 
 name: 'Execução por Deploy'
 # regras de disparo (gatilho/triggers)
