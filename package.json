@@ -4,7 +4,7 @@
   "scripts": {
     "test": "playwright test",
     "e2e": "playwright test",
-    "install:playwright": "playwright install"
+    "install:playwright": "playwright install --with-deps"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.1"
