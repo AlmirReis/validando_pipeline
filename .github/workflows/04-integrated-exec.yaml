@@ -53,8 +53,8 @@ jobs:
       - name: Instalando dependências
         run: yarn install
 
-      - name: Instalando Playwright
-        run: npx playwright install
+      - name: Instalando Playwright e navegadores
+        run: npx playwright install --with-deps
 
       - name: Executando Testes E2E
         run: yarn run e2e
