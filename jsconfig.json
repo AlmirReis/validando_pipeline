@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "checkJs": true,
+    "allowJs": true,
     "module": "commonjs",
-    "outDir": "dist",
-    "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "skipLibCheck": true
   },
-  "include": ["e2e/**/*", "tests/**/*"]
+  "include": ["./e2e/**/*", "./tests/**/*"]
 }
