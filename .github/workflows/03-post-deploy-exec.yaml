@@ -28,6 +28,7 @@ jobs:
     # passa do script de build
     steps:
       - uses: actions/checkout@v4
+      
 
       - name: Instalando Node
         uses: actions/setup-node@v3
