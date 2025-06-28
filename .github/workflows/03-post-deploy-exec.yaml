@@ -23,7 +23,7 @@ jobs:
     # `$ {expressao }`
     # == comparacao
 
-    if: $ {{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     # passa do script de build
     steps:
