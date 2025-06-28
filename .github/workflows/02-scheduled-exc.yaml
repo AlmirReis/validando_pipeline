@@ -1,12 +1,11 @@
 # CI de Nivel 02 - Disparo agendado
 # v5
 
-name: 'Execução Agendada'
+name: "Execução Agendada"
 
 on:
   schedule:
-    - cron: '10 17 * * 5'
-     
+    - cron: "10 17 * * 5"
 
 jobs:
   e2e-test:
@@ -18,7 +17,7 @@ jobs:
       - name: Instalando Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: "22.x"
 
       - name: Instalando Yarn
         run: npm install -g yarn

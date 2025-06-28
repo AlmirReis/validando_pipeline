@@ -2,11 +2,15 @@
   "name": "meu-pipeline-de-testes",
   "version": "1.0.0",
   "scripts": {
+    "lint": "npm run lint:ts && npm run lint:format",
+    "lint:ts": "tsc -b jsconfig.json",
+    "lint:format": "prettier --check --ignore-path .gitignore .",
     "test": "playwright test",
     "e2e": "playwright test",
     "install:playwright": "playwright install --with-deps"
   },
   "devDependencies": {
-    "@playwright/test": "^1.53.1"
+    "@playwright/test": "^1.53.1",
+    "prettier": "^3.6.2"
   }
 }

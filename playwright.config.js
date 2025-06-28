@@ -1,10 +1,10 @@
 // playwright.config.js
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './e2e',
+  testDir: "./e2e",
   retries: 1,
-  reporter: [['html', { open: 'never' }]], 
+  reporter: [["html", { open: "never" }]],
   use: {
     headless: true,
     viewport: { width: 1280, height: 720 },

@@ -1,7 +1,7 @@
 # CI de Nivel 04 - Disparo dos testes dentro do pipe de dev
 # v5
 
-name: 'Execução Integrada'
+name: "Execução Integrada"
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
         run: yarn install
 
       - name: Checando padronização do código
-        run: yarn lint    
+        run: yarn lint
 
   unidade:
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
       - name: Instalando Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: "22.x"
 
       - name: Instalando Yarn
         run: npm install -g yarn
@@ -65,7 +65,7 @@ jobs:
         with:
           name: relatorio
           path: ./playwright-report
-  
+
   deploy:
     runs-on: ubuntu-latest
 
