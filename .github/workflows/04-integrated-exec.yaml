@@ -1,5 +1,5 @@
 # CI de Nivel 04 - Disparo dos testes dentro do pipe de dev
-# V2
+# v5
 
 name: 'Execução Integrada'
 
@@ -17,16 +17,32 @@ jobs:
         run: npm install -g yarn
 
       - name: Instalando dependências
-        run: yarn
+        run: yarn install
 
-      - name: Checando padrinizacao do códido
+      - name: Checando padronização do código
         run: yarn lint    
 
   unidade:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4PS C:\PROGRAMACAO> tree /f
+      - uses: actions/checkout@v4
+
+      - name: Instalando Yarn
+        run: npm install -g yarn
+
+      - name: Instalando dependências
+        run: yarn install
+
+      - name: Executando testes de unidade
+        run: yarn test
+
+  e2e-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
       - name: Instalando Node
         uses: actions/setup-node@v4
         with:
@@ -43,14 +59,12 @@ jobs:
 
       - name: Executando Testes E2E
         run: yarn run e2e
-        env:
-          DEBUG: pw.api
 
       - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled()}}
-        with: 
+        if: ${{ !cancelled() }}
+        with:
           name: relatorio
-          path: ./playwright-report  
+          path: ./playwright-report
   
   deploy:
     runs-on: ubuntu-latest
@@ -58,5 +72,3 @@ jobs:
     steps:
       - name: Simulação do Deploy
         run: echo "Simulando o deploy com sucesso"
-
-
